@@ -1,0 +1,23 @@
+<div style="padding: 16px;">
+
+    <form action="/postproduct" method="POST">
+        <input name="productBody" type="text" placeholder="Enter Product"/>
+        <button type="submit">New Product</button>
+    </form>
+    
+    List of all products:
+
+    <% allProduct.forEach(product => { %>
+        <div style='background-color:wheat; padding:  12px; margin-bottom: 8px;'>
+           <div style="font-weight: bold;">
+            <%= product.user.fullName %>
+           </div>
+           <div >
+            <%= new Date(product.createdAt).toLocaleTimeString()
+             + " " + new Date(product.createdAt).toLocaleDateString() %>
+           </div>
+            <%= product.text %>
+        </div>
+    <% }) %>
+
+</div>
