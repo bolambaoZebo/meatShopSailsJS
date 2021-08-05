@@ -51,6 +51,10 @@ module.exports.datastores = {
     // adapter: 'sails-mysql',
     // url: 'mysql://user:password@host:port/database',
 
+    adapter: 'sails-mongo',
+    url: 'mongodb://meatShopAdmin:DNlzOeNl9C2X4XBl@meatshopcluster-shard-00-00.uib29.mongodb.net:27017,meatshopcluster-shard-00-01.uib29.mongodb.net:27017,meatshopcluster-shard-00-02.uib29.mongodb.net:27017/meatShopDB?ssl=true&replicaSet=atlas-uevrl7-shard-0&authSource=admin&retryWrites=true&w=majority'
+
+
   },
 
 

@@ -1,0 +1,109 @@
+<style>
+
+    .outer-div {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .inner-div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .header-image-logo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+
+    .header-label {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .form-div {
+        background-color: white;
+        border-radius: 5px;
+        padding: 24px;
+    }
+
+    .label-form-div{
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+    .form-login {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input {
+        border-radius: 6px;
+        border: solid 0.2px rgb(133, 133, 133);
+        padding: 12px;
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    button {
+        background-color: dodgerblue;
+        border: solid 1px dodgerblue;
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        padding: 12px;
+    }
+
+</style>
+
+<script>
+
+    async function handleLogin(){
+        console.log('logging in')
+        //fire off a put request
+        const email = document.getElementById('email').value 
+        const password = document.getElementById('password').value 
+        const formData = new FormData()
+        formData.append('emailAddress', email)
+        formData.append('password', password)
+
+        try{
+            const response = await axios.put('/api/v1/entrance/login', formData)
+            document.location = "/listproducts"
+        }catch (err){
+            console.log(err.toString())
+        }
+    }
+
+</script>
+
+<div class="outer-div">
+    <div class="inner-div">
+        <div class="header-image-logo">
+            <img style="width: 100px;" src="/images/fresh-meat.jpg"/>
+            <div class="header-label">Fresh Meatery</div>
+        </div>
+        <div class="form-div">
+            <div class="label-form-div">
+                Log into your account
+            </div>
+
+            <form 
+            class="form-login">
+                <input id="email" name="emailAddress" type="text" placeholder="Email"/>
+                <input id="password" name="password" type="text" placeholder="Password"/>
+                <button onclick="handleLogin()" type="button">Login</button>
+            </form>
+
+            <div>
+                Don't have an account?
+                <a href="/signup">Sign up.</a>
+            </div>
+        </div>
+    </div>
+</div>

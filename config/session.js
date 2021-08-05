@@ -21,9 +21,9 @@ module.exports.session = {
   secret: 'c734c92f732bb8b3e494d65fcb356b58',
   
   adapter: 'connect-mongo',
-  url: 'mongodb://meatShop101:HOizM2cLWMVRSEf4@meatshopcluster-shard-00-00.uib29.mongodb.net:27017,meatshopcluster-shard-00-01.uib29.mongodb.net:27017,meatshopcluster-shard-00-02.uib29.mongodb.net:27017/meatShopDB?ssl=true&replicaSet=atlas-uevrl7-shard-0&authSource=admin&retryWrites=true&w=majority',
+  url: 'mongodb://meatShopAdmin:DNlzOeNl9C2X4XBl@meatshopcluster-shard-00-00.uib29.mongodb.net:27017,meatshopcluster-shard-00-01.uib29.mongodb.net:27017,meatshopcluster-shard-00-02.uib29.mongodb.net:27017/meatShopDB?ssl=true&replicaSet=atlas-uevrl7-shard-0&authSource=admin&retryWrites=true&w=majority',
   // url: 'mongodb+srv://meatShop101:HOizM2cLWMVRSEf4@meatshopcluster.uib29.mongodb.net/meatShopDB?retryWrites=true&w=majoritymongodb://meatShop101:<password>@meatshopcluster-shard-00-00.uib29.mongodb.net:27017,meatshopcluster-shard-00-01.uib29.mongodb.net:27017,meatshopcluster-shard-00-02.uib29.mongodb.net:27017/meatShopDB?ssl=true&replicaSet=atlas-uevrl7-shard-0&authSource=admin&retryWrites=true&w=majority',
-  collection: 'sessions',
+  // collection: 'sessions',
   
   /***************************************************************************
   *                                                                          *
